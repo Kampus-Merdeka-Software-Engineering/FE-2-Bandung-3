@@ -12,11 +12,12 @@ body {
     align-items: center;
     justify-content: space-between;
     background: #003B95;
-    background: linear-gradient(to left, #003B95, #413ef8);
+    background: linear-gradient(to left, #003B95, #0056d6);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #FFF;
     height: 50px;
     padding: 5px;
+    
   }
   
   .menu {
@@ -28,7 +29,7 @@ body {
   }
   
   .menu > li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
     overflow: hidden;
   }
   
@@ -1001,7 +1002,7 @@ ul li button:hover {
     grid-template-areas: "image" "text";
 
     border-radius: 20px;
-    background: white;
+    background-color: transparent;
     /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9); */
     text-align: center;
 
@@ -1264,4 +1265,56 @@ ul li button:hover {
     text-align: center;
     font-size: 2vw;
     color: #0F294D;
+}
+
+/* style page booking coba-coba jangan dibully */
+.booking-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #fff;
+}
+  .wrapper form .label#from::after {
+    content: 'From';
+}
+.wrapper form .label#to::after {
+    content: 'To';
+}
+  div.elem-group {
+    margin: 20px 0;
+} 
+div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+}
+label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+}
+input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 10px;
+  }
+button {
+    height: 50px;
+    background: #006ce4;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 12px;
+  }
+button:hover {
+    background: #333;
 }
