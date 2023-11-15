@@ -178,8 +178,8 @@ ul li button:hover {
     display: flex;
     align-items: center;
 }
-
 /* end navbar */
+
 
 /* style gambar home */
 .hero {
@@ -201,7 +201,6 @@ ul li button:hover {
 
     margin: 0;
     height: 100%;
-
 }
 
 /* style motto */
@@ -210,13 +209,23 @@ ul li button:hover {
     padding-top: 150px;
     padding-right: 100px;
     padding-bottom: 7vw;
-    
+    animation: slide-in 1s ease-in-out;
     color: white;
 }
 
 .motto h2 {
     font-size: 4vw;
+    animation: slide-in 1s ease-in-out;
 }
+@keyframes slide-in {
+    0% {
+      transform: translateX(-20%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
 .motto p{
     font-size: 2.5vw;
 }
@@ -245,9 +254,6 @@ ul li button:hover {
     margin-right: 0;
     width: 100%;
     color: #0F294D;
-
-
-
 }
 
 .about-us img {
@@ -256,9 +262,18 @@ ul li button:hover {
     max-width: 350px;
     height: auto;
     border-radius: 30px;
-
-
+    animation: fade-in 0.5s ease-in-out;
 }
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
 
 .about-us .ttg {
 
