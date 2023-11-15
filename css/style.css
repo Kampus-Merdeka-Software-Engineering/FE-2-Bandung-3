@@ -210,15 +210,14 @@ ul li button:hover {
     padding-top: 150px;
     padding-right: 100px;
     padding-bottom: 7vw;
-
+    
     color: white;
 }
 
 .motto h2 {
     font-size: 4vw;
 }
-
-.motto p {
+.motto p{
     font-size: 2.5vw;
 }
 
@@ -257,6 +256,8 @@ ul li button:hover {
     max-width: 350px;
     height: auto;
     border-radius: 30px;
+
+
 }
 
 .about-us .ttg {
@@ -269,6 +270,7 @@ ul li button:hover {
 
 .about-us .ttg p {
     padding-bottom: 50px;
+    animation: slide-up 1s ease-in-out;
 }
 
 .about-us .ttg h2 {
@@ -278,8 +280,18 @@ ul li button:hover {
 
 .about-us h2 {
     font-size: 2em;
+    animation: slide-up 1s ease-in-out;
 }
 
+@keyframes slide-up {
+    0% {
+      transform: translateY(-20%);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
 /* end about us */
 
 
