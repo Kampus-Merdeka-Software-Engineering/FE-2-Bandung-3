@@ -563,7 +563,6 @@ ul li button:hover {
     color: #0F294D;
     font-size: 3vw;
     line-height: 0.8em;
-    /* text-transform: uppercase; */
     margin-top: 25px;
     letter-spacing: 2px
 }
@@ -1551,5 +1550,11 @@ button:hover {
 .cont.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
-
+.overlay img{
+   height: 3.5vw; 
+}
 /* --- end page login & register--- */
+
+/* page booking */
+
+/* end page boking */

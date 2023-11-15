@@ -25,7 +25,7 @@
         <label class='menu-button-container' for="menu-toggle">
             <div class='menu-button'></div>
         </label>
-      
+
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -38,73 +38,6 @@
     </section>
     <!-- end navbar -->
 
-    <!-- form booking -->
-    <div class="form">
-        <form class="booking-form" action="#" method="post">
-            <div class="form-group d-sm-flex margin">
-                <div class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative">
-                    <input type="text" required placeholder="From" class="form-control">
-                    <div class="label" id="from"></div>
-                    <span class="fas fa-dot-circle text-muted"></span>
-                </div>
-                <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
-                    <input type="text" required placeholder="To" class="form-control">
-                    <div class="label" id="to"></div>
-                    <span class="fas fa-map-marker text-muted"></span>
-                </div>
-            </div>
-
-            <div class="elem-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="passanger_name" placeholder="Enter your name" pattern=[A-Z\sa-z]{3,20} required>
-            </div>
-
-            <div class="elem-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="passanger_email" placeholder="core.travlio@email.com" required>
-            </div>
-
-            <div class="elem-group">
-              <label for="phone">Telphone</label>
-              <input type="tel" id="phone" name="passanger_phone" placeholder="1234-5678-9012" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
-            </div>
-
-            <div class="elem-group inlined">
-              <label for="adult">Adults</label>
-              <input type="number" id="adult" name="total_adults" placeholder="0" min="1" required>
-            </div>
-
-            <div class="elem-group inlined">
-              <label for="child">Children</label>
-              <input type="number" id="child" name="total_children" placeholder="0" min="0" required>
-            </div>
-
-            <div class="elem-group inlined">
-              <label for="departure-date">Departure date</label>
-              <input type="date" id="departure-date" name="departure" required>
-            </div>
-
-            <div class="elem-group inlined">
-              <label for="to-date">Date to</label>
-              <input type="date" id="to-date" name="date to" required>
-            </div>
-
-            <div class="elem-group">
-              <label for="airlines-selection">Select Airlines</label>
-              <select id="airlines-selection" name="airlines_preference" required>
-                  <option value="">Choose Airlines</option>
-                  <option value="connecting">Air Asia</option>
-                  <option value="adjoining">Batik Air</option>
-                  <option value="adjacent">Lion Air</option>
-                  <option value="adjacent">Garuda Indonesia</option>
-                  <option value="adjacent">Sriwijaya Air</option>
-              </select>
-            </div>
-            <button type="submit">Book your seat !</button>
-        </form>
-    </div>
-
-    <!-- copyright -->
     <div class="site-footer">
         <div class="container1">
             <div class="row1">
@@ -116,6 +49,6 @@
             </div>
         </div>
     </div>
-
 </body>
+
 </html>
