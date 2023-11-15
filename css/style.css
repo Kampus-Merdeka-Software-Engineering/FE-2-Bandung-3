@@ -320,7 +320,7 @@ ul li button:hover {
 
 .card-img {
     grid-area: image;
-    background: url("/assets/img/bali.jpg");
+    background: url("/assets/destination/16yogyakarta.jpg");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
@@ -349,7 +349,7 @@ ul li button:hover {
 
 /*card2*/
 .card-img.card2 {
-    background: url("/assets/img/bromo.jpg");
+    background: url("/assets/destination/20lombok.jpg");
     background-size: cover;
 
 }
@@ -361,13 +361,13 @@ ul li button:hover {
 
 /*card3*/
 .card-img.card3 {
-    background: url("");
+    background: url("/assets/destination/21labuanbajo.jpg");
     background-size: cover;
 }
 
 /* style airlines */
 /*card4*/
-.card1 {
+.airlines .card1 {
     display: grid;
     grid-template-columns: 350px;
     grid-template-rows: 200px;
@@ -380,7 +380,7 @@ ul li button:hover {
     margin: 30px;
 }
 
-.card1:hover {
+.airlines .card1:hover {
     transform: scale(1.15);
 }
 
@@ -1061,6 +1061,21 @@ ul li button:hover {
     align-items: center;
 }
 
+.card-img.card1 {
+    background: url("");
+    background-size: cover;
+}
+
+.card-img.card2 {
+    background: url("");
+    background-size: cover;
+}
+
+.card-img.card3 {
+    background: url("");
+    background-size: cover;
+}
+
 .card-img.card4 {
     background: url("");
     background-size: cover;
@@ -1112,67 +1127,67 @@ ul li button:hover {
 }
 
 .card-img.card14 {
-    background: url("");
+    background: url("/assets/destination/14malang.jpg");
     background-size: cover;
 }
 
 .card-img.card15 {
-    background: url("");
+    background: url("/assets/destination/15semarang.jpg");
     background-size: cover;
 }
 
 .card-img.card16 {
-    background: url("");
+    background: url("/assets/destination/16yogyakarta.jpg");
     background-size: cover;
 }
 
 .card-img.card17 {
-    background: url("");
+    background: url("/assets/destination/17solo.jpg");
     background-size: cover;
 }
 
 .card-img.card18 {
-    background: url("");
+    background: url("/assets/destination/18surabaya.jpg");
     background-size: cover;
 }
 
 .card-img.card19 {
-    background: url("");
+    background: url("/assets/destination/19denpasar.jpg");
     background-size: cover;
 }
 
 .card-img.card20 {
-    background: url("");
+    background: url("/assets/destination/20lombok.jpg");
     background-size: cover;
 }
 
 .card-img.card21 {
-    background: url("");
+    background: url("/assets/destination/21labuanbajo.jpg");
     background-size: cover;
 }
 
 .card-img.card22 {
-    background: url("");
+    background: url("/assets/destination/22kupang.jpg");
     background-size: cover;
 }
 
 .card-img.card23 {
-    background: url("");
+    background: url("/assets/destination/23pontianak.jpg");
     background-size: cover;
 }
 
 .card-img.card24 {
-    background: url("");
+    background: url("/assets/destination/24banjarmasin.jpeg");
     background-size: cover;
 }
 
 .card-img.card25 {
-    background: url("");
+    background: url("/assets/destination/25balikpapan.jpg");
     background-size: cover;
 }
 
 .card-img.card26 {
-    background: url("");
+    background: url("/assets/destination/26ambon.jpg");
     background-size: cover;
 }
 
@@ -1237,21 +1252,6 @@ ul li button:hover {
 }
 
 .card-img.card39 {
-    background: url("");
-    background-size: cover;
-}
-
-.card-img.card40 {
-    background: url("");
-    background-size: cover;
-}
-
-.card-img.card41 {
-    background: url("");
-    background-size: cover;
-}
-
-.card-img.card42 {
     background: url("");
     background-size: cover;
 }
