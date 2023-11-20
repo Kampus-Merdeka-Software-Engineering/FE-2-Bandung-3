@@ -6,6 +6,7 @@ body {
 
 /* navbar */
 .top-nav {
+    top: 0;
     position: fixed;
     box-sizing: border-box;
     z-index: 3;
@@ -178,6 +179,7 @@ ul li button:hover {
     display: flex;
     align-items: center;
 }
+
 /* end navbar */
 
 
@@ -185,7 +187,7 @@ ul li button:hover {
 .hero {
     margin: 0;
     height: 100%;
-    background-image: url(/assets/img/peakpx.jpg);
+    background-image: url(../assets/img/peakpx.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -217,16 +219,18 @@ ul li button:hover {
     font-size: 4vw;
     animation: slide-in 1s ease-in-out;
 }
+
 @keyframes slide-in {
     0% {
-      transform: translateX(-20%);
+        transform: translateX(-20%);
     }
-  
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
-.motto p{
+}
+
+.motto p {
     font-size: 2.5vw;
 }
 
@@ -267,13 +271,13 @@ ul li button:hover {
 
 @keyframes fade-in {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 .about-us .ttg {
 
@@ -300,13 +304,14 @@ ul li button:hover {
 
 @keyframes slide-up {
     0% {
-      transform: translateY(-20%);
+        transform: translateY(-20%);
     }
-  
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
+}
+
 /* end about us */
 
 
@@ -338,7 +343,7 @@ ul li button:hover {
     grid-template-areas: "image" "text";
     border-radius: 18px;
     background: white;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     text-align: left;
     transition: 0.5s ease;
     cursor: pointer;
@@ -347,7 +352,7 @@ ul li button:hover {
 
 .card-img {
     grid-area: image;
-    background: url("/assets/destination/16yogyakarta.jpg");
+    background: url("../assets/destination/16yogyakarta.jpg");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
@@ -376,7 +381,7 @@ ul li button:hover {
 
 /*card2*/
 .card-img.card2 {
-    background: url("/assets/destination/20lombok.jpg");
+    background: url("../assets/destination/20lombok.jpg");
     background-size: cover;
 
 }
@@ -388,7 +393,7 @@ ul li button:hover {
 
 /*card3*/
 .card-img.card3 {
-    background: url("/assets/destination/21labuanbajo.jpg");
+    background: url("../assets/destination/21labuanbajo.jpg");
     background-size: cover;
 }
 
@@ -412,7 +417,7 @@ ul li button:hover {
 }
 
 .card-image1.card4 {
-    background: url("/assets/airlines/airasia.png");
+    background: url("../assets/airlines/airasia.png");
     background-size: cover;
 
 
@@ -420,14 +425,14 @@ ul li button:hover {
 
 /*card5*/
 .card-image1.card5 {
-    background: url("/assets/airlines/garudaindonesia.png");
+    background: url("../assets/airlines/garudaindonesia.png");
     background-size: cover;
     width: 90%;
 }
 
 /*card6*/
 .card-image1.card6 {
-    background: url("/assets/airlines/sriwijayaair.png");
+    background: url("../assets/airlines/sriwijayaair.png");
     background-size: cover;
     width: 90%;
 }
@@ -713,6 +718,14 @@ ul li button:hover {
     .row div.footer1 {
         margin-right: 10%;
     }
+
+    .top-nav {
+        padding: 0px 20px;
+    }
+
+    .menu>li {
+        margin: 0px 10px;
+    }
 }
 
 @media (max-width:800px) {
@@ -723,7 +736,7 @@ ul li button:hover {
     .menu {
         position: absolute;
         top: 0;
-        margin-top: 60px;
+        margin-top: 50px;
         left: 0;
         flex-direction: column;
         width: 100%;
@@ -759,6 +772,10 @@ ul li button:hover {
     .menu>li:not(:last-child) {
         border-bottom: 1px solid #444;
         height: 30px;
+    }
+
+    .top-nav {
+        padding: 0px 20px;
     }
 
     .site-footer {
@@ -913,7 +930,7 @@ ul li button:hover {
 .hero1 {
     margin: 0;
     height: 100%;
-    background-image: url(/assets/img/pemandanganpesawat.jpg);
+    background-image: url(../assets/img/pemandanganpesawat.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1009,7 +1026,7 @@ ul li button:hover {
 /* laya */
 .card-img-ag {
     grid-area: image;
-    background: url("/assets/img/pulauflores.jpg");
+    background: url("../assets/img/pulauflores.jpg");
     border-radius: 500px;
     background-size: cover;
 }
@@ -1036,7 +1053,7 @@ ul li button:hover {
 
 /*agung*/
 .card-img-ag.card7 {
-    background: url("/assets/img/bromo.jpg");
+    background: url("../assets/img/bromo.jpg");
     background-size: cover;
 }
 
@@ -1066,7 +1083,7 @@ ul li button:hover {
 
 /* dina */
 .card-img-ag.card12 {
-    background: url("/assets/img/bromo.jpg");
+    background: url("../assets/img/bromo.jpg");
     background-size: cover;
 }
 
@@ -1153,67 +1170,67 @@ ul li button:hover {
 }
 
 .card-img.card14 {
-    background: url("/assets/destination/14malang.jpg");
+    background: url("../assets/destination/14malang.jpg");
     background-size: cover;
 }
 
 .card-img.card15 {
-    background: url("/assets/destination/15semarang.jpg");
+    background: url("../assets/destination/15semarang.jpg");
     background-size: cover;
 }
 
 .card-img.card16 {
-    background: url("/assets/destination/16yogyakarta.jpg");
+    background: url("../assets/destination/16yogyakarta.jpg");
     background-size: cover;
 }
 
 .card-img.card17 {
-    background: url("/assets/destination/17solo.jpg");
+    background: url("../assets/destination/17solo.jpg");
     background-size: cover;
 }
 
 .card-img.card18 {
-    background: url("/assets/destination/18surabaya.jpg");
+    background: url("../assets/destination/18surabaya.jpg");
     background-size: cover;
 }
 
 .card-img.card19 {
-    background: url("/assets/destination/19denpasar.jpg");
+    background: url("../assets/destination/19denpasar.jpg");
     background-size: cover;
 }
 
 .card-img.card20 {
-    background: url("/assets/destination/20lombok.jpg");
+    background: url("../assets/destination/20lombok.jpg");
     background-size: cover;
 }
 
 .card-img.card21 {
-    background: url("/assets/destination/21labuanbajo.jpg");
+    background: url("../assets/destination/21labuanbajo.jpg");
     background-size: cover;
 }
 
 .card-img.card22 {
-    background: url("/assets/destination/22kupang.jpg");
+    background: url("../assets/destination/22kupang.jpg");
     background-size: cover;
 }
 
 .card-img.card23 {
-    background: url("/assets/destination/23pontianak.jpg");
+    background: url("../assets/destination/23pontianak.jpg");
     background-size: cover;
 }
 
 .card-img.card24 {
-    background: url("/assets/destination/24banjarmasin.jpeg");
+    background: url("../assets/destination/24banjarmasin.jpeg");
     background-size: cover;
 }
 
 .card-img.card25 {
-    background: url("/assets/destination/25balikpapan.jpg");
+    background: url("../assets/destination/25balikpapan.jpg");
     background-size: cover;
 }
 
 .card-img.card26 {
-    background: url("/assets/destination/26ambon.jpg");
+    background: url("../assets/destination/26ambon.jpg");
     background-size: cover;
 }
 
@@ -1284,13 +1301,13 @@ ul li button:hover {
 
 /* -------style page airlines------ */
 .card-image1.card7 {
-    background: url("/assets/airlines/batikair.png");
+    background: url("../assets/airlines/batikair.png");
     background-size: cover;
 
 }
 
 .card-image1.card8 {
-    background: url("/assets/airlines/lionair.png");
+    background: url("../assets/airlines/lionair.png");
     background-size: cover;
 
 }
@@ -1303,285 +1320,370 @@ ul li button:hover {
     color: #0F294D;
 }
 
-/* style page booking coba-coba jangan dibully */
+/* page booking */
+.hero2 {
+    height: 100%;
+}
+
+.container3 {
+    display: flex;
+    width: auto;
+    margin: 100px;
+}
+
+.images {
+    height: 100%;
+    background-size: cover;
+    display: grid;
+    padding-right: 15px;
+    grid-template-columns: 45vw;
+    grid-template-rows: 60vw;
+
+}
+
+.images img {
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
 .booking-form {
-    width: 500px;
-    margin: 0 auto;
+    flex: 2;
+    background-color: #0062E3;
+    border: 1px solid rgb(255, 255, 255)4f4;
+    border-radius: 10px;
     padding: 50px;
-    background: #fff;
 }
 
-.wrapper form .label#from::after {
-    content: 'From';
+.booking-form h2 {
+    color: white;
+    padding: 0px 30px;
 }
 
-.wrapper form .label#to::after {
-    content: 'To';
+.booking-form h3 {
+    color: white;
+    padding: 0px 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    font-family: 'poppins';
+    font-size: 15px;
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+.form-button {
+    margin-top: 10px;
+    background-color: #f7f8f9;
+    color: #0F294D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: center;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: #0F294D;
+    color: white;
+}
+
+.sec1 {
+    padding-left: 30px;
+    display: inline-block;
 }
 
 div.elem-group {
-    margin: 20px 0;
+    width: 90%;
+    margin: 20px 30px;
+
 }
 
 div.elem-group.inlined {
-    width: 49%;
+    margin: 0px 0px 0px 5px;
+    width: 46%;
     display: inline-block;
-    float: left;
-    margin-left: 1%;
 }
 
-label {
-    display: block;
-    font-family: 'Nanum Gothic';
-    padding-bottom: 10px;
-    font-size: 1.25em;
-}
-
-input,
-select,
-textarea {
-    border-radius: 2px;
-    border: 2px solid #777;
-    box-sizing: border-box;
-    font-size: 1.25em;
-    font-family: 'Nanum Gothic';
-    width: 100%;
-    padding: 10px;
-}
-
-button {
-    height: 50px;
-    background: #006ce4;
-    border: none;
+div.elem-group.inlined label {
     color: white;
-    font-size: 1.25em;
-    font-family: 'Nanum Gothic';
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 0 12px;
+    padding-left: 13px;
+    font-size: 15px;
+    padding-bottom: 0;
 }
 
-button:hover {
-    background: #333;
+select {
+    width: 98%;
+    height: 50px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    font-family: 'poppins';
+    font-size: 15px;
 }
 
-/* end booking */
+select:hover {
+    background-color: #F4F7FE;
 
-/* ---page login & register--- */
-.bodyLogin {
-    box-sizing: border-box;
-    background: #F4F7FE;
+}
+
+select:focus {
+    outline: none;
+    border-color: blue;
+}
+
+/* booking from and to */
+::selection {
+    color: #fff;
+    background: #4285f4;
+}
+
+.wrapper {
+    padding-right: 0px;
+    width: 45%;
+    display: inline-block;
+
+}
+
+#wrapper {
+    padding-right: 0px;
+}
+
+.select-btn,
+li {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: -20px 0 50px;
+    cursor: pointer;
 }
 
-.cont h1 {
-    font-weight: bold;
+.select-btn {
+    height: 48px;
+    padding: 0 10px;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn i {
+    font-size: 25px;
+    transition: transform 0.3s linear;
+}
+
+.wrapper.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    width: 160px;
+    margin-top: 5px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active .content {
+    position: absolute;
+    display: inline-block;
+}
+
+.content .search {
+    position: relative;
+}
+
+.search i {
+    top: 50%;
+    left: 15px;
+    color: #999;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.search input {
+    height: 37px;
+    width: 98%;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 0 20px 0 43px;
+    border: 1px solid #B3B3B3;
+}
+
+.search input:focus {
+    padding-left: 42px;
+    border: 2px solid #4285f4;
+}
+
+.search input::placeholder {
+    color: #bfbfbf;
+}
+
+.content .options {
+    display: block;
+    margin-top: 10px;
+    max-height: 140px;
+    overflow-y: auto;
+    padding-right: 7px;
+    padding-left: 0px;
+
+}
+
+.content ul li {
     margin: 0;
 }
 
-.cont h2 {
-    text-align: center;
+.options::-webkit-scrollbar {
+    width: 7px;
 }
 
-.cont p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-}
-
-.cont span {
-    font-size: 12px;
-}
-
-.cont a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-}
-
-.cont button {
-    margin-top: 20px;
-    border-radius: 30px;
-    border: 1px solid #006ce4;
-    background-color: #006ce4;
-    color: #FFFFFF;
-    font-size: 15px;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    font-family: 'poppins', Arial, Helvetica, sans-serif;
-}
-
-.cont button:active {
-    transform: scale(0.95);
-}
-
-.cont button:focus {
-    outline: none;
-}
-
-.cont button.ghost {
-    background-color: transparent;
-    border-color: #FFFFFF;
-}
-
-.formlogin {
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
-}
-
-.cont input {
-    background-color: #eee;
+.options::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 25px;
-    border: none;
-    padding: 12px 18px;
-    margin: 8px 0;
-    width: 100%;
 }
 
-.cont {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-    position: relative;
-    overflow: hidden;
-    width: 900px;
-    max-width: 100%;
-    min-height: 480px;
+.options::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
 }
 
-.form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
+.options::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
 }
 
-.sign-in-container {
-    left: 0;
-    width: 50%;
-    z-index: 2;
+.options li {
+    height: 35px;
+    padding: 0 5px;
+    font-size: 15px;
 }
 
-.cont.right-panel-active .sign-in-container {
-    transform: translateX(100%);
+.options li:hover,
+li.selected {
+    border-radius: 5px;
+    background: #f2f2f2;
 }
 
-.sign-up-container {
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
-}
-
-.cont.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-    animation: show 0.6s;
-}
-
-@keyframes show {
-
-    0%,
-    49.99% {
-        opacity: 0;
-        z-index: 1;
+@media screen and (max-width: 800px) {
+    .container3 {
+        display: block;
+        justify-content: center;
     }
 
-    50%,
-    100% {
-        opacity: 1;
-        z-index: 5;
+    .booking-form {
+        margin: 100px 0px;
+        padding: 10px 20px 20px;
+    }
+
+    .booking-form h2 {
+        padding: 0px 50px;
+    }
+
+    .booking-form h3 {
+        padding: 0px 50px;
+    }
+
+    div.elem-group.inlined {
+        margin: 0;
+        width: 46%;
+        display: inline-block;
+    }
+
+    div.elem-group.inlined #adult {
+        margin-left: 10px;
+    }
+
+
+    .wrapper {
+        padding: 0px 10px;
+        width: 43%;
+        display: inline-block;
+
+    }
+
+    #wrapper {
+        padding-right: 0px;
+    }
+
+    .images {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .form-input {
+        padding: 12px 15px 12px 12px;
+    }
+
+    input#child.form-input {
+        margin-left: 16px;
     }
 }
 
-.overlay-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
+@media screen and (max-width: 1300px) {
+    .container3 {
+        display: flex;
+        width: auto;
+        margin: 100px 20px;
+    }
+
+    .booking-form {
+        margin: 0px;
+        padding: 10px 10px 20px;
+    }
+
+    select {
+        width: 95%;
+        height: 50px;
+        border-radius: 20px;
+        padding: 0px 10px;
+        font-family: 'poppins';
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .images {
+        display: grid;
+        padding-right: 15px;
+        grid-template-columns: 45vw;
+        grid-template-rows: 60vw;
+
+    }
+
+    .sec1 {
+        padding-left: 30px;
+        display: inline-block;
+    }
+
 }
 
-.cont.right-panel-active .overlay-container {
-    transform: translateX(-100%);
+@media screen and (max-width: 1200px) {
+    .images {
+        display: grid;
+        padding-right: 15px;
+        grid-template-columns: 40vw;
+        grid-template-rows: 80vw;
+
+    }
 }
 
-.overlay {
-    background: #3b6fb9;
-    background: -webkit-linear-gradient(to right, #0F294D, #3b6fb9);
-    background: linear-gradient(to right, #0F294D, #3b6fb9);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 0;
-    color: #FFFFFF;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+@media screen and (max-width: 500px) {
+    .sec1 {
+        padding-left: 20px !important;
+        display: inline-block;
+    }
 }
-
-.cont.right-panel-active .overlay {
-    transform: translateX(50%);
-}
-
-.overlay-panel {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-}
-
-.overlay-left {
-    transform: translateX(-20%);
-}
-
-.cont.right-panel-active .overlay-left {
-    transform: translateX(0);
-}
-
-.overlay-right {
-    right: 0;
-    transform: translateX(0);
-}
-
-.cont.right-panel-active .overlay-right {
-    transform: translateX(20%);
-}
-.overlay img{
-   height: 3.5vw; 
-}
-/* --- end page login & register--- */
-
-/* page booking */
 
 /* end page boking */
