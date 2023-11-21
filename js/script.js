@@ -4,11 +4,11 @@ var year = currentDateTime.getFullYear();
 var month = (currentDateTime.getMonth() + 1);
 var date = (currentDateTime.getDate() + 1);
 
-if(date < 10) {
-  date = '0' + date;
+if (date < 10) {
+    date = '0' + date;
 }
-if(month < 10) {
-  month = '0' + month;
+if (month < 10) {
+    month = '0' + month;
 }
 
 var dateTomorrow = year + "-" + month + "-" + date;
@@ -18,16 +18,15 @@ checkinElem.setAttribute("min", dateTomorrow);
 
 //from
 const wrapper = document.querySelector(".wrapper"),
-selectBtn = wrapper.querySelector(".select-btn"),
-searchInp = wrapper.querySelector("input"),
-options = wrapper.querySelector(".options");
+    selectBtn = wrapper.querySelector(".select-btn"),
+    searchInp = wrapper.querySelector("input"),
+    options = wrapper.querySelector(".options");
 
-let countries = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
-                 "Brazil", "Canada", "China", "Denmark", "Ethiopia", "Finland", "France", "Germany",
-                 "Hungary", "Iceland", "India", "Indonesia", "Iran", "Italy", "Japan", "Malaysia",
-                 "Maldives", "Mexico", "Morocco", "Nepal", "Netherlands", "Nigeria", "Norway", "Pakistan",
-                 "Peru", "Russia", "Romania", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland",
-                 "Thailand", "Turkey", "Uganda", "Ukraine", "United States", "United Kingdom", "Vietnam"];
+let countries = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
+    "Pangkal Pinang", "Pekanbaru", "Bandar Lampung", "Tanjung Pinang", "Bandung", "Bangka Belitung", "Malang", "Semarang",
+    "Yogyakarta", "Solo", "Surabaya", "Denpasar", "Lombok", "Labuan Bajo", "Kupang", "Pontianak",
+    "Banjarmasin", "Balikpapan", "Ambon", "Mataram", "Kendari", "Gorontalo", "Makassar", "Manado",
+    "Palu", "Ternate", "Samarinda", "Biak", "Jayapura", "Marauke", "Timika", "Sorong"];
 
 function addCountry(selectedCountry) {
     options.innerHTML = "";
@@ -62,16 +61,15 @@ selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 
 //to
 const wrapper1 = document.querySelector("#wrapper"),
-selectBtn1 = wrapper1.querySelector("#select-btn"),
-searchInp1 = wrapper1.querySelector(".input"),
-options1 = wrapper1.querySelector("#options");
+    selectBtn1 = wrapper1.querySelector("#select-btn"),
+    searchInp1 = wrapper1.querySelector(".input"),
+    options1 = wrapper1.querySelector("#options");
 
-let countries1 = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
-                 "Brazil", "Canada", "China", "Denmark", "Ethiopia", "Finland", "France", "Germany",
-                 "Hungary", "Iceland", "India", "Indonesia", "Iran", "Italy", "Japan", "Malaysia",
-                 "Maldives", "Mexico", "Morocco", "Nepal", "Netherlands", "Nigeria", "Norway", "Pakistan",
-                 "Peru", "Russia", "Romania", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland",
-                 "Thailand", "Turkey", "Uganda", "Ukraine", "United States", "United Kingdom", "Vietnam"];
+let countries1 = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
+    "Pangkal Pinang", "Pekanbaru", "Bandar Lampung", "Tanjung Pinang", "Bandung", "Bangka Belitung", "Malang", "Semarang",
+    "Yogyakarta", "Solo", "Surabaya", "Denpasar", "Lombok", "Labuan Bajo", "Kupang", "Pontianak",
+    "Banjarmasin", "Balikpapan", "Ambon", "Mataram", "Kendari", "Gorontalo", "Makassar", "Manado",
+    "Palu", "Ternate", "Samarinda", "Biak", "Jayapura", "Marauke", "Timika", "Sorong"];
 
 function addCountry1(selectedCountry1) {
     options1.innerHTML = "";
@@ -103,3 +101,5 @@ searchInp1.addEventListener("keyup", () => {
 });
 
 selectBtn1.addEventListener("click", () => wrapper1.classList.toggle("active"));
+
+// script untuk menyambungkan API

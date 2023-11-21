@@ -1516,7 +1516,7 @@ li {
 
 .search input {
     height: 37px;
-    width: 98%;
+    width: 100px;
     outline: none;
     font-size: 17px;
     border-radius: 5px;
@@ -1576,6 +1576,103 @@ li.selected {
     border-radius: 5px;
     background: #f2f2f2;
 }
+/* riwayat booking table */
+.riwayat-booking h2{
+    padding: 5px 100px;
+    background-color: white;
+}
+.wrap-table{
+    margin: 30px 100px;
+    padding: 10PX 10px;
+    border-radius:10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  }
+  table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #F4F7FE;
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    color:white;
+    background-color: #006CE4;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  table .nama {
+    border-top-left-radius :10px;
+  }
+  table .air-lines {
+    border-top-right-radius :10px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .wrap-table{
+      margin:15px;
+    }
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
 
 @media screen and (max-width: 800px) {
     .container3 {
@@ -1670,6 +1767,9 @@ li.selected {
 }
 
 @media screen and (max-width: 1200px) {
+    .wrap-table{
+        margin: 3%;
+      }
     .images {
         display: grid;
         padding-right: 15px;

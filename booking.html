@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css\style.css">
     <!-- font awsome "Travlio" -->
     <script src="https://kit.fontawesome.com/99449ba607.js" crossorigin="anonymous"></script>
-         <!-- Iconscout Link For Icons -->
-         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 </head>
 
@@ -40,7 +40,7 @@
     </section>
     <!-- end navbar -->
 
-    
+
     <div class="container3">
         <div class="images">
             <img src="assets/img/bookingimglebar.jpeg" alt="">
@@ -62,6 +62,7 @@
             </div>
 
             <div class="sec1">
+
                 <div class="wrapper">
                     <div class="select-btn">
                         <span>From</span>
@@ -88,12 +89,13 @@
                         <ul class="options" id="options"></ul>
                     </div>
                 </div>
-                
+
                 <div class="elem-group inlined" id="adult">
                     <label for="adult">Adults</label>
                     <input type="number" id="adult" name="total_adults" class="form-input" placeholder="0" min="1"
                         required>
                 </div>
+
                 <div class="elem-group inlined">
                     <label for="child">Children</label>
                     <input type="number" id="child" name="total_children" class="form-input" placeholder="0" min="0"
@@ -101,17 +103,53 @@
                 </div>
             </div>
             <div class="elem-group">
-                    <select class="select" id="airlines-selection" name="airlines_preference" required>
-                        <option value="">Choose Airlines</option>
-                        <option value="connecting">Air Asia</option>
-                        <option value="adjoining">Batik Air</option>
-                        <option value="adjacent">Lion Air</option>
-                        <option value="adjacent">Garuda Indonesia</option>
-                        <option value="adjacent">Sriwijaya Air</option>
-                    </select>
+                <select class="select" id="airlines-selection" name="airlines_preference" required>
+                    <option value="" disabled selected>Choose Airlines</option>
+                    <option value="connecting">Air Asia</option>
+                    <option value="adjoining">Batik Air</option>
+                    <option value="adjacent">Lion Air</option>
+                    <option value="adjacent">Garuda Indonesia</option>
+                    <option value="adjacent">Sriwijaya Air</option>
+                </select>
             </div>
             <center><button class="form-button">Book Now</button></center>
+        </div>
+    </div>
 
+    <!-- menampilkan riwayat booking -->
+    <div class="riwayat-booking">
+        <h2>Riwayat Booking</h2>
+        <div class="wrap-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="nama" scope="col">Nama</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Adults</th>
+                        <th scope="col">Childern</th>
+                        <th class="air-lines" scope="col">Airlines</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nama">$</td>
+                        <td data-label="E-Mail">$</td>
+                        <td data-label="Phone">$</td>
+                        <td data-label="Date">$</td>
+                        <td data-label="From">$</td>
+                        <td data-label="To">$</td>
+                        <td data-label="Adults">$</td>
+                        <td data-label="Children">$</td>
+                        <td data-label="Airlines">$</td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
     </div>
 
