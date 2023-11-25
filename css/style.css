@@ -1399,21 +1399,24 @@ ul li button:hover {
     color: white;
 }
 
-.sec1 {
-    padding-left: 30px;
+div.sec1 {
+    padding-left: 25px;
     display: inline-block;
+    width: 94%;
 }
 
 div.elem-group {
-    width: 90%;
-    margin: 20px 30px;
+    width: 90.5%;
+    margin: 20px 27px 30px;
 
 }
 
 div.elem-group.inlined {
-    margin: 0px 0px 0px 5px;
-    width: 46%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 47%;
     display: inline-block;
+    align-self: center;
 }
 
 div.elem-group.inlined label {
@@ -1421,6 +1424,7 @@ div.elem-group.inlined label {
     padding-left: 13px;
     font-size: 15px;
     padding-bottom: 0;
+    position: relative;
 }
 
 select {
@@ -1452,11 +1456,25 @@ select:focus {
     padding-right: 0px;
     width: 45%;
     display: inline-block;
-
 }
 
 #wrapper {
     padding-right: 0px;
+    width: 47%;
+}
+
+div.elem-group #adult {
+    /* border: #0f294d solid 4px; */
+    width: 90%;
+    display: inline-block;
+    padding-right: 0px;
+}
+
+div.elem-group #child {
+    /* border: #0f294d solid 4px; */
+    width: 90%;
+    padding-right: 0px;
+
 }
 
 .select-btn,
@@ -1674,7 +1692,7 @@ li.selected {
     }
   }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .container3 {
         display: block;
         justify-content: center;
@@ -1699,14 +1717,24 @@ li.selected {
         display: inline-block;
     }
 
-    div.elem-group.inlined #adult {
-        margin-left: 10px;
+    div.elem-group.inlined label {
+        padding-left: 30px;
+        top: 3px;
     }
 
+    div.elem-group.inlined #adult {
+        margin-left: 20px;
+    }
+
+    div.sec1 {
+        padding-left: 45px;
+        display: inline-block;
+        width: 91%;
+    }
 
     .wrapper {
-        padding: 0px 10px;
-        width: 43%;
+        padding: 0px 0px 0px 19px;
+        width: 42%;
         display: inline-block;
 
     }
@@ -1725,7 +1753,7 @@ li.selected {
     }
 
     input#child.form-input {
-        margin-left: 16px;
+        margin-left: 30px;
     }
 }
 
@@ -1759,9 +1787,10 @@ li.selected {
 
     }
 
-    .sec1 {
-        padding-left: 30px;
+    div.sec1 {
+        padding-left: 45px;
         display: inline-block;
+        width: 91%;
     }
 
 }
@@ -1773,9 +1802,14 @@ li.selected {
     .images {
         display: grid;
         padding-right: 15px;
-        grid-template-columns: 40vw;
-        grid-template-rows: 80vw;
+        grid-template-columns: 49vw;
+        grid-template-rows: 65vw;
+    }
 
+    div.sec1 {
+        padding-left: 35px;
+        display: inline-block;
+        width: 91%;
     }
 }
 
@@ -1784,6 +1818,47 @@ li.selected {
         padding-left: 20px !important;
         display: inline-block;
     }
+
+    div.elem-group.inlined {
+        margin: 0;
+        width: 46%;
+        display: inline-block;
+    }
+
+    div.elem-group.inlined label {
+        padding-left: 30px;
+        top: 3px;
+    }
+
+    div.elem-group.inlined #adult {
+        margin-left: 10px;
+    }
+
+    div.sec1 {
+        padding-left: 35px;
+        display: inline-block;
+        width: 95%;
+    }
+
+    .wrapper {
+        padding: 0px 0px 0px 10px;
+        width: 42%;
+        display: inline-block;
+
+    }
+
+    #wrapper {
+        padding-right: 0px;
+    }
+
+    input#child.form-input {
+        margin-left: 10px;
+    }
+
+    div.elem-group {
+        width: 93%;
+        margin: 20px 20px 30px;
+    
 }
 
 /* end page boking */
