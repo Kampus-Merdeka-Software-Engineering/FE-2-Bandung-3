@@ -168,7 +168,7 @@ ul li button:hover {
     font-family: 'Pacifico', dex;
     font-weight: 10;
     background: rgb(255, 255, 255);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
@@ -992,6 +992,8 @@ ul li button:hover {
     position: relative;
     color: #0f294d;
     text-decoration: none;
+    margin: 0px 10px;
+    font-size: 20px;
 }
 
 .card-about a::before {
@@ -1429,18 +1431,24 @@ ul li button:hover {
 }
 
 .form-group {
+    display: flex;
     margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-input {
     font-family: 'poppins';
     font-size: 15px;
-    width: 80%;
+    width: 85%;
     padding: 12px;
     border: 1px solid #ffffff;
     border-radius: 20px;
 }
-
+.button-booking{
+    display:flex;
+    justify-content: center;
+}
 .form-button {
     margin-top: 10px;
     background-color: #f7f8f9;
@@ -1474,7 +1482,7 @@ div.elem-group {
 
 div.elem-group.inlined {
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 2% 0px 0px;
     width: 47%;
     display: inline-block;
     align-self: center;
@@ -1514,14 +1522,14 @@ select:focus {
 }
 
 .wrapper {
-    padding-right: 0px;
-    width: 45%;
+    padding-right: 3%;
+    width: 46%;
     display: inline-block;
 }
 
 #wrapper {
     padding-right: 0px;
-    width: 47%;
+    width: 46%;
 }
 
 div.elem-group #adult {

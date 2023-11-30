@@ -22,7 +22,7 @@
     <!-- navbar -->
     <section class="top-nav">
         <div class="navbar-logo">
-            <img src="../assets/img/travliologo.png" alt="logo">
+            <img src="./assets/img/travliologo.png" alt="logo">
         </div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
@@ -49,16 +49,16 @@
             <h2>Book Your Seat</h2>
             <h3>Book your seat now and secure your spot for an unforgettable journey.</h3>
             <div class="form-group">
-                <center><input type="text" id="name" class="form-input" placeholder="Name"></center>
+                <input type="text" id="name" class="form-input" placeholder="Name">
             </div>
             <div class="form-group">
-                <center><input type="email" id="email" class="form-input" placeholder="Email"></center>
+                <input type="email" id="email" class="form-input" placeholder="Email">
             </div>
             <div class="form-group">
-                <center><input type="text" id="phone" class="form-input" placeholder="Phone"></center>
+                <input type="text" id="phone" class="form-input" placeholder="Phone">
             </div>
             <div class="form-group">
-                <center><input type="date" id="date" class="form-input"></center>
+                <input type="date" id="date" class="form-input">
             </div>
 
             <div class="sec1">
@@ -102,6 +102,7 @@
                         required>
                 </div>
             </div>
+
             <div class="elem-group">
                 <select class="select" id="airlines-selection" name="airlines_preference" required>
                     <option value="" disabled selected>Choose Airlines</option>
@@ -112,7 +113,10 @@
                     <option value="adjacent">Sriwijaya Air</option>
                 </select>
             </div>
-            <center><button class="form-button">Book Now</button></center>
+            <div class="button-booking">
+                <button class="form-button">Book Now</button>
+
+            </div>
         </div>
     </div>
 
