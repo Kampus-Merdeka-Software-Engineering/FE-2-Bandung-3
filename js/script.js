@@ -1,8 +1,9 @@
+// script start booking page
 //date
-var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
+let currentDateTime = new Date();
+let year = currentDateTime.getFullYear();
+let month = (currentDateTime.getMonth() + 1);
+let date = (currentDateTime.getDate() + 1);
 
 if (date < 10) {
     date = '0' + date;
@@ -11,36 +12,36 @@ if (month < 10) {
     month = '0' + month;
 }
 
-var dateTomorrow = year + "-" + month + "-" + date;
-var checkinElem = document.querySelector("#date");
+let dateTomorrow = year + "-" + month + "-" + date;
+let checkinElem = document.querySelector("#date");
 
 checkinElem.setAttribute("min", dateTomorrow);
 
 //from
-const wrapper = document.querySelector(".wrapper"),
-    selectBtn = wrapper.querySelector(".select-btn"),
-    searchInp = wrapper.querySelector("input"),
-    options = wrapper.querySelector(".options");
+const wrapper = document.querySelector(".wrapper");
+const selectBtn = wrapper.querySelector(".select-btn");
+const searchInp = wrapper.querySelector("input");
+const options = wrapper.querySelector(".options");
 
-let countries = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
+let destination = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
     "Pangkal Pinang", "Pekanbaru", "Bandar Lampung", "Tanjung Pinang", "Bandung", "Bangka Belitung", "Malang", "Semarang",
     "Yogyakarta", "Solo", "Surabaya", "Denpasar", "Lombok", "Labuan Bajo", "Kupang", "Pontianak",
     "Banjarmasin", "Balikpapan", "Ambon", "Mataram", "Kendari", "Gorontalo", "Makassar", "Manado",
     "Palu", "Ternate", "Samarinda", "Biak", "Jayapura", "Marauke", "Timika", "Sorong"];
 
-function addCountry(selectedCountry) {
+function addDestination(selectedDestination) {
     options.innerHTML = "";
-    countries.forEach(country => {
-        let isSelected = country == selectedCountry ? "selected" : "";
-        let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
+    destination.forEach(destinasi => {
+        let isSelected = destinasi == selectedDestination ? "selected" : "";
+        let li = `<li onclick="updateName(this)" class="${isSelected}">${destinasi}</li>`;
         options.insertAdjacentHTML("beforeend", li);
     });
 }
-addCountry();
+addDestination();
 
 function updateName(selectedLi) {
     searchInp.value = "";
-    addCountry(selectedLi.innerText);
+    addDestination(selectedLi.innerText);
     wrapper.classList.remove("active");
     selectBtn.firstElementChild.innerText = selectedLi.innerText;
 }
@@ -48,58 +49,110 @@ function updateName(selectedLi) {
 searchInp.addEventListener("keyup", () => {
     let arr = [];
     let searchWord = searchInp.value.toLowerCase();
-    arr = countries.filter(data => {
+    arr = destination.filter(data => {
         return data.toLowerCase().startsWith(searchWord);
     }).map(data => {
         let isSelected = data == selectBtn.firstElementChild.innerText ? "selected" : "";
         return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
     }).join("");
-    options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
+    options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Your destination not found</p>`;
 });
 
 selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 
 //to
-const wrapper1 = document.querySelector("#wrapper"),
-    selectBtn1 = wrapper1.querySelector("#select-btn"),
-    searchInp1 = wrapper1.querySelector(".input"),
-    options1 = wrapper1.querySelector("#options");
+const wrapper_to = document.querySelector("#wrapper"),
+    selectBtn_to = wrapper_to.querySelector("#select-btn"),
+    searchInp_to = wrapper_to.querySelector(".input"),
+    options_to = wrapper_to.querySelector("#options");
 
-let countries1 = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
+let destination_to = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
     "Pangkal Pinang", "Pekanbaru", "Bandar Lampung", "Tanjung Pinang", "Bandung", "Bangka Belitung", "Malang", "Semarang",
     "Yogyakarta", "Solo", "Surabaya", "Denpasar", "Lombok", "Labuan Bajo", "Kupang", "Pontianak",
     "Banjarmasin", "Balikpapan", "Ambon", "Mataram", "Kendari", "Gorontalo", "Makassar", "Manado",
     "Palu", "Ternate", "Samarinda", "Biak", "Jayapura", "Marauke", "Timika", "Sorong"];
 
-function addCountry1(selectedCountry1) {
-    options1.innerHTML = "";
-    countries1.forEach(country1 => {
-        let isSelected1 = country1 == selectedCountry1 ? "selected1" : "";
-        let li = `<li onclick="updateName1(this)" class="${isSelected1}">${country1}</li>`;
-        options1.insertAdjacentHTML("beforeend", li);
+function addDestination_to(selectedCountry_to) {
+    options_to.innerHTML = "";
+    destination_to.forEach(country_to => {
+        let isSelected_to = country_to == selectedCountry_to ? "selected_to" : "";
+        let li = `<li onclick="updateName_to(this)" class="${isSelected_to}">${country_to}</li>`;
+        options_to.insertAdjacentHTML("beforeend", li);
     });
 }
-addCountry1();
+addDestination_to();
 
-function updateName1(selectedLi1) {
-    searchInp1.value = "";
-    addCountry1(selectedLi1.innerText);
-    wrapper1.classList.remove("active");
-    selectBtn1.firstElementChild.innerText = selectedLi1.innerText;
+function updateName_to(selectedLi_to) {
+    searchInp_to.value = "";
+    addDestination_to(selectedLi_to.innerText);
+    wrapper_to.classList.remove("active");
+    selectBtn_to.firstElementChild.innerText = selectedLi_to.innerText;
 }
 
-searchInp1.addEventListener("keyup", () => {
-    let arr1 = [];
-    let searchWord1 = searchInp1.value.toLowerCase();
-    arr1 = countries1.filter(data1 => {
-        return data1.toLowerCase().startsWith(searchWord1);
-    }).map(data1 => {
-        let isSelected1 = data1 == selectBtn1.firstElementChild.innerText ? "selected" : "";
-        return `<li onclick="updateName1(this)" class="${isSelected1}">${data1}</li>`;
+searchInp_to.addEventListener("keyup", () => {
+    let arr_to = [];
+    let searchWord_to = searchInp_to.value.toLowerCase();
+    arr_to = destination_to.filter(data_to => {
+        return data_to.toLowerCase().startsWith(searchWord_to);
+    }).map(data_to => {
+        let isSelected_to = data_to == selectBtn_to.firstElementChild.innerText ? "selected" : "";
+        return `<li onclick="updateName_to(this)" class="${isSelected_to}">${data_to}</li>`;
     }).join("");
-    options1.innerHTML = arr1 ? arr1 : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
+    options_to.innerHTML = arr_to ? arr_to : `<p style="margin-top: 10px;">Oops! Your Destination not found</p>`;
 });
 
-selectBtn1.addEventListener("click", () => wrapper1.classList.toggle("active"));
+selectBtn_to.addEventListener("click", () => wrapper_to.classList.toggle("active"));
+// script end booking page
+
+// smooth scrool pada index.html 
+function currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+        return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
+}
+
+
+function elmYPosition(eID) {
+    var elm = document.getElementById(eID);
+    var y = elm.offsetTop;
+    var node = elm;
+    while (node.offsetParent && node.offsetParent != document.body) {
+        node = node.offsetParent;
+        y += node.offsetTop;
+    } return y;
+}
+
+
+function smoothScroll(eID) {
+    var startY = currentYPosition();
+    var stopY = elmYPosition(eID);
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 100) {
+        scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if (speed >= 20) speed = 20;
+    var step = Math.round(distance / 25);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+  return false;
+}
+// end scrool
+
 
 // script untuk menyambungkan API
