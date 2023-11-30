@@ -21,6 +21,24 @@ body {
     padding: 30px 100px;
 }
 
+.scroll {
+    background: #003B95;
+    background: linear-gradient(to left, #003B95, #0056d6);
+    top: -100px;
+    width: 100%;
+    animation: fadedown 0.5s ease 1s forwards;
+}
+
+@keyframes fadedown {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
 .menu {
     display: flex;
     flex-direction: row;
@@ -142,24 +160,6 @@ ul li button:hover {
     border-width: 2px;
 }
 
-.scroll {
-    background: #eeeff1;
-    top: -100px;
-    border-radius: 35px;
-    width: 90%;
-    animation: fadedown 0.5s ease 0.7s forwards;
-}
-
-@keyframes fadedown {
-    0% {
-        top: -100px;
-    }
-
-    100% {
-        top: 20px;
-    }
-}
-
 .navbar-logo {
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +179,6 @@ ul li button:hover {
     display: flex;
     align-items: center;
 }
-
 /* end navbar */
 
 
@@ -197,6 +196,7 @@ ul li button:hover {
     flex-wrap: wrap;
     display: flex;
     background: rgba(0, 0, 0, 0.5);
+    
 }
 
 .hero img {
@@ -348,7 +348,19 @@ ul li button:hover {
     transition: 0.5s ease;
     cursor: pointer;
     margin: 30px;
+    animation: slidein 1s ease-in-out;
 }
+
+@keyframes slidein {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 .card-img {
     grid-area: image;
@@ -410,7 +422,19 @@ ul li button:hover {
     transition: 0.5s ease;
     cursor: pointer;
     margin: 30px;
+    animation: slidein 1s ease-in-out;
 }
+
+@keyframes slidein {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 .airlines .card1:hover {
     transform: scale(1.15);
@@ -945,12 +969,24 @@ ul li button:hover {
 
 .motto1 {
     padding-left: 100px;
-    padding-top: 200px;
+    padding-top: 115px;
     padding-right: 100px;
-    padding-bottom: 1px;
+    padding-bottom: 115px;
     font-size: 3vw;
     color: white;
+    animation: slide-in 1s ease-in-out;
 }
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 .card-about a {
     position: relative;
@@ -1102,11 +1138,24 @@ ul li button:hover {
     padding: 100px 100px 0px;
     display: flex;
     align-items: center;
+    animation: slide-up 1s ease-in-out;
+    
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .card-img.card1 {
     background: url("");
     background-size: cover;
+    
 }
 
 .card-img.card2 {
@@ -1318,7 +1367,19 @@ ul li button:hover {
     text-align: center;
     font-size: 2vw;
     color: #0F294D;
+    animation: slide-up 1s ease-in-out;
 }
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 /* page booking */
 .hero2 {
@@ -1860,5 +1921,4 @@ li.selected {
         margin: 20px 20px 30px;
     
 }
-
-/* end page boking */
+}
