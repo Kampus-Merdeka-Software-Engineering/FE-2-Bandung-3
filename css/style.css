@@ -168,7 +168,7 @@ ul li button:hover {
     font-family: 'Pacifico', dex;
     font-weight: 10;
     background: rgb(255, 255, 255);
-    background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
 
