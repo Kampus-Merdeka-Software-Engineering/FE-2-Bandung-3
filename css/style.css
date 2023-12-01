@@ -703,6 +703,7 @@ ul li button:hover {
         text-align: center;
         justify-content: center;
         padding: 0px 100px;
+        margin-bottom: 5vw;
     }
 
     .row {
@@ -840,10 +841,11 @@ ul li button:hover {
     }
 
     .about-us .ttg {
+        height: 85%;
         text-align: center;
         justify-content: center;
         padding: 0px 10px;
-        margin-bottom: 5vw;
+        margin-bottom: 10%;
     }
 
     .destinasi {
