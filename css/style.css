@@ -270,6 +270,48 @@ ul li button:hover {
     animation: fade-in 0.5s ease-in-out;
 }
 
+.about-us1 {
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+    background-color: #F4F7FE;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    width: 100%;
+    color: #0F294D;
+    justify-content: space-evenly;
+}
+.about-us1 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 30px;
+    animation: fade-in 0.5s ease-in-out;
+}
+.about-us1 .ttg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    height: 300px;
+}
+
+.about-us1 .ttg p {
+    padding-bottom: 50px;
+    animation: slide-up 1s ease-in-out;
+}
+
+.about-us1 .ttg h2 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.about-us1 h2 {
+    font-size: 2em;
+    animation: slide-up 1s ease-in-out;
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -708,7 +750,6 @@ ul li button:hover {
 
     .row {
         justify-content: center;
-        /* width: 100%; */
         padding: 3px 20px;
     }
 
