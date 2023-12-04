@@ -43,7 +43,7 @@
 
     <div class="container3">
         <div class="images">
-            <img src="assets/img/bookingimglebar.jpeg" alt="">
+            <!-- <img src="assets/img/bookingimglebar.jpeg" alt=""> -->
         </div>
         <div class="booking-form">
             <h2>Book Your Seat</h2>
@@ -52,10 +52,10 @@
                 <input type="text" id="name" class="form-input" placeholder="Name">
             </div>
             <div class="form-group">
-                <input type="email" id="email" class="form-input" placeholder="Email">
+                <input type="email" id="email" class="form-input" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input type="text" id="phone" class="form-input" placeholder="Phone">
+                <input type="text" id="phone" class="form-input" placeholder="Phone" required>
             </div>
             <div class="form-group">
                 <input type="date" id="date" class="form-input">
@@ -114,7 +114,8 @@
                 </select>
             </div>
             <div class="button-booking">
-                <button class="form-button">Book Now</button>
+                
+                <button class="form-button" onclick="validasi_destinasi()">Book Now</button>
 
             </div>
         </div>

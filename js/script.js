@@ -61,10 +61,10 @@ searchInp.addEventListener("keyup", () => {
 selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 
 //to
-const wrapper_to = document.querySelector("#wrapper"),
-    selectBtn_to = wrapper_to.querySelector("#select-btn"),
-    searchInp_to = wrapper_to.querySelector(".input"),
-    options_to = wrapper_to.querySelector("#options");
+const wrapper_to = document.querySelector("#wrapper");
+const selectBtn_to = wrapper_to.querySelector("#select-btn");
+const searchInp_to = wrapper_to.querySelector(".input");
+const options_to = wrapper_to.querySelector("#options");
 
 let destination_to = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Padang", "Palembang",
     "Pangkal Pinang", "Pekanbaru", "Bandar Lampung", "Tanjung Pinang", "Bandung", "Bangka Belitung", "Malang", "Semarang",
@@ -72,11 +72,11 @@ let destination_to = ["Banda Aceh", "Batam", "Bengkulu", "Jambi", "Medan", "Pada
     "Banjarmasin", "Balikpapan", "Ambon", "Mataram", "Kendari", "Gorontalo", "Makassar", "Manado",
     "Palu", "Ternate", "Samarinda", "Biak", "Jayapura", "Marauke", "Timika", "Sorong"];
 
-function addDestination_to(selectedCountry_to) {
+function addDestination_to(selectedDestination_to) {
     options_to.innerHTML = "";
-    destination_to.forEach(country_to => {
-        let isSelected_to = country_to == selectedCountry_to ? "selected_to" : "";
-        let li = `<li onclick="updateName_to(this)" class="${isSelected_to}">${country_to}</li>`;
+    destination_to.forEach(dest_to => {
+        let isSelected_to = dest_to == selectedDestination_to ? "selected_to" : "";
+        let li = `<li onclick="updateName_to(this)" class="${isSelected_to}" on>${dest_to}</li>`;
         options_to.insertAdjacentHTML("beforeend", li);
     });
 }
@@ -102,6 +102,13 @@ searchInp_to.addEventListener("keyup", () => {
 });
 
 selectBtn_to.addEventListener("click", () => wrapper_to.classList.toggle("active"));
+// validasi untuk from dan to
+function validasi_destinasi(){  
+    if (options !== options_to) {
+        alert("please choose another destination")
+    }
+
+}
 // script end booking page
 
 // smooth scrool pada index.html 
@@ -118,9 +125,9 @@ function currentYPosition() {
 
 
 function elmYPosition(eID) {
-    var elm = document.getElementById(eID);
-    var y = elm.offsetTop;
-    var node = elm;
+    let elm = document.getElementById(eID);
+    let y = elm.offsetTop;
+    let node = elm;
     while (node.offsetParent && node.offsetParent != document.body) {
         node = node.offsetParent;
         y += node.offsetTop;
@@ -129,30 +136,29 @@ function elmYPosition(eID) {
 
 
 function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID);
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    let startY = currentYPosition();
+    let stopY = elmYPosition(eID);
+    let distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
         scrollTo(0, stopY); return;
     }
-    var speed = Math.round(distance / 100);
+    let speed = Math.round(distance / 100);
     if (speed >= 20) speed = 20;
-    var step = Math.round(distance / 25);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
+    let step = Math.round(distance / 25);
+    let leapY = stopY > startY ? startY + step : startY - step;
+    let timer = 0;
     if (stopY > startY) {
-        for ( var i=startY; i<stopY; i+=step ) {
+        for ( let i=startY; i<stopY; i+=step ) {
             setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
             leapY += step; if (leapY > stopY) leapY = stopY; timer++;
         } return;
     }
-    for ( var i=startY; i>stopY; i-=step ) {
+    for ( let i=startY; i>stopY; i-=step ) {
         setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
         leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
     }
   return false;
 }
 // end scrool
-
 
 // script untuk menyambungkan API
