@@ -1504,6 +1504,7 @@ table .air-lines {
         opacity: 1;
     }
 }
+
 @keyframes slide-in {
     0% {
         transform: translateX(-100px);
@@ -1515,10 +1516,6 @@ table .air-lines {
         opacity: 1;
     }
 }
-
-
-
-
 
 /* responsive style */
 @media screen and (max-width: 800px) {
