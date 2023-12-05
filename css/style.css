@@ -1505,9 +1505,17 @@ table .air-lines {
     }
 }
 
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
 
-
-
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 /* responsive style */
 @media screen and (max-width: 800px) {
