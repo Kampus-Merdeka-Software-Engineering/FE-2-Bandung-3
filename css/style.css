@@ -154,7 +154,6 @@ ul li button:hover {
 .navbar-logo {
     display: flex;
     flex-wrap: wrap;
-    cursor: pointer;
     font-size: 18px;
     font-family: 'Pacifico', dex;
     font-weight: 10;
@@ -934,8 +933,20 @@ ul li button:hover {
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
+    
 }
 
+.booking-card:hover {
+    background-color: #004CA3;
+}
+
+.booking-card:active {
+  background-color: #00286F;
+}
+
+.booking-card:hover {
+    transform: rotate(15deg);
+  }
 
 .card-img.card1 {
     background: url("../assets/destination/1.Aceh.jpg");
@@ -1540,6 +1551,13 @@ table .air-lines {
 }
 
 /* responsive style */
+@media screen and (max-width: 700px) {
+    .images {
+        position: absolute;
+        visibility: hidden;
+    }
+
+}
 @media screen and (max-width: 800px) {
     .menu-button-container {
         display: flex;
@@ -1591,10 +1609,7 @@ table .air-lines {
     }
 
     .site-footer {
-
         padding-bottom: 0;
-
-
     }
 
     .site-footer .contact form input,
@@ -1757,11 +1772,6 @@ table .air-lines {
 
     #wrapper {
         padding-right: 0px;
-    }
-
-    .images {
-        position: absolute;
-        visibility: hidden;
     }
 
     .form-input {
