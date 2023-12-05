@@ -43,9 +43,7 @@
 
 
     <div class="container3">
-        <div class="images">
-            <!-- <img src="assets/img/bookingimglebar.jpeg" alt=""> -->
-        </div>
+        <div class="images"></div>
         <div class="booking-form">
             <h2>Book Your Seat</h2>
             <h3>Book your seat now and secure your spot for an unforgettable journey.</h3>
@@ -116,7 +114,7 @@
             </div>
             <div class="button-booking">
                 
-                <button class="form-button" onclick="validasi_destinasi()">Book Now</button>
+                <button type="submit" class="form-button" onclick="validasi_destinasi()">Book Now</button>
 
             </div>
         </div>
@@ -129,7 +127,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="nama" scope="col">Nama</th>
+                        <th class="nama" scope="col">Name</th>
                         <th scope="col">E-Mail</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Date</th>
@@ -142,18 +140,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td data-label="Nama">$</td>
-                        <td data-label="E-Mail">$</td>
-                        <td data-label="Phone">$</td>
-                        <td data-label="Date">$</td>
-                        <td data-label="From">$</td>
-                        <td data-label="To">$</td>
-                        <td data-label="Adults">$</td>
-                        <td data-label="Children">$</td>
-                        <td data-label="Airlines">$</td>
-                    </tr>
-
+                 <!-- diambil dari database melalui api -->
                 </tbody>
             </table>
         </div>
@@ -173,6 +160,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/booking.js"></script>
 </body>
 
 </html>
