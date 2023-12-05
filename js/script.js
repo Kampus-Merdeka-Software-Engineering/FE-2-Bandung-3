@@ -103,8 +103,10 @@ searchInp_to.addEventListener("keyup", () => {
 
 selectBtn_to.addEventListener("click", () => wrapper_to.classList.toggle("active"));
 // validasi untuk from dan to
-function validasi_destinasi(){  
-    if (options !== options_to) {
+function validasi_destinasi(){ 
+    let valueFrom =  document.getElementById('optionsFrom').value;
+    let valueTo =  document.getElementById('options').value;
+    if (valueFrom !== valueTo) {
         alert("please choose another destination")
     }
 
@@ -162,3 +164,91 @@ function smoothScroll(eID) {
 // end scrool
 
 // script untuk menyambungkan API
+const API_BASE_URL = '';
+
+// Mendapatkan referensi ke elemen-elemen HTML
+const BookingForm = document.getElementById('booking-form');
+const riwayatTabel = document.querySelector('tbody');
+
+// Menghubungkan fungsi submitForm dengan penyerahan formulir
+bookingForm.addEventListener('form-button', formButton);
+
+// Mengambil data reservasi saat halaman dimuat
+window.addEventListener('DOMContentLoaded', fetchData);
+
+// Fungsi untuk menampilkan notifikasi
+function BookingNotification(title, message) {
+    if ('Notification' in window) {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          const notification = new Notification(title, {
+            body: message,
+          });         
+          notification.onclick = function () {
+          };
+        } else {
+          // Notifikasi ditolak
+          alert(message);
+        }
+      });
+    } else {
+      // Browser tidak mendukung notifikasi, tampilkan pesan alternatif
+      alert(message);
+    }
+  }
+
+async function submitForm(event) {
+    event.preventDefault();
+  
+    const formData = new FormData(bookingForm);
+  
+    const bookingData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      from: formData.get('from'),
+      to: formData.get('to'),
+      bookingdate: new Date(formData.get('date')).toISOString(),
+      airlines: formData.get('airlines')
+    };
+  
+    const selectedDate = bookingData.bookingdate;
+
+  
+    // Memeriksa apakah kombinasi service, dokter, tanggal, dan waktu sudah ada dalam reservasi yang ada
+    const isDuplicateBooking = await isBookingDuplicate(bookingData);
+    if (isDuplicateBooking) {
+      alert('Reservasi dengan kombinasi yang sama sudah ada. Silakan pilih kombinasi yang lain.');
+      return;
+    }
+  
+    try {
+      const response = await fetch(`${API_BASE_URL}/booking`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json' //ini apa??
+        },
+        body: JSON.stringify(bookingData)
+      });
+  
+      if (response.ok) {
+        const createdBooking = await response.json();
+        displayBooking(createdBooking);
+        // Tandai waktu yang sudah terpakai
+        if (!bookedTimes[selectedDate]) {
+          bookedTimes[selectedDate] = [];
+        }
+  
+        // Tampilkan notifikasi berhasil
+        BookingNotification('Reservasi berhasil!', 'Terima kasih telah melakukan reservasi.');
+      } else {
+        console.error('Gagal membuat reservasi');
+        // Tampilkan notifikasi gagal
+        BookingNotification('Gagal membuat reservasi', 'Mohon coba lagi nanti.');
+      }
+    } catch (error) {
+      console.error(error);
+      // Tampilkan notifikasi gagal
+      BookingNotification('Gagal membuat reservasi', 'Terjadi kesalahan. Mohon coba lagi nanti.');
+    }
+  }
