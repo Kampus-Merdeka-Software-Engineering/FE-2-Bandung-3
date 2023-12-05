@@ -1462,7 +1462,7 @@ table .air-lines {
     border-top-right-radius: 10px;
 }
 
-/* keyframe */
+
 @keyframes fadedown {
     0% {
         top: -100px;
