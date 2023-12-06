@@ -62,7 +62,7 @@ selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 
 //to
 const wrapper_to = document.querySelector("#wrapper");
-const selectBtn_to = wrapper_to.querySelector("#select-btn");
+const selectBtn_to = wrapper_to.querySelector("#select-btn-to");
 const searchInp_to = wrapper_to.querySelector(".input");
 const options_to = wrapper_to.querySelector("#options");
 
@@ -104,13 +104,14 @@ searchInp_to.addEventListener("keyup", () => {
 selectBtn_to.addEventListener("click", () => wrapper_to.classList.toggle("active"));
 // validasi untuk from dan to
 function validasi_destinasi() {
-  let valueFrom = document.querySelector('optionsFrom');
-  let valueTo = document.querySelector('options');
+  let valueFrom = selectBtn.value;
+  let valueTo = selectBtn_to.value;
   if (valueFrom !== valueTo) {
     alert("please choose another destination")
   }
 
 }
+validasi_destinasi();
 // script end booking page
 
 // smooth scrool pada index.html 
