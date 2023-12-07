@@ -883,13 +883,13 @@ ul li button:hover {
 
 /* frida */
 .card-img-ag.card11 {
-    background: url("");
+    background: url("../assets/members/afrida.jpg");
     background-size: cover;
 }
 
 /* dina */
 .card-img-ag.card12 {
-    background: url("../assets/img/bromo.jpg");
+    background: url("../assets/members/dina.jpeg");
     background-size: cover;
 }
 
