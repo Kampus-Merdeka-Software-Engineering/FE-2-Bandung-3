@@ -166,10 +166,10 @@
 
             <div class="contact">
                 <h2>Contact Us</h2>
-                <form action="#" method="post">
-                    <input type="text" name="email" placeholder="Email">
-                    <textarea name="message" placeholder="Type Your Message..."></textarea>
-                    <button class="btn-sm">Submit</button>
+                <form action="#" method="post" id="contact-us">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Type Your Message..." required></textarea>
+                    <button type="submit" class="btn-sm">Submit</button>
                 </form>
             </div>
         </div>
@@ -188,5 +188,6 @@
     <!-- end footer -->
     <script src="js/animation.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
