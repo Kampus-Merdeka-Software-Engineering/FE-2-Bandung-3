@@ -56,11 +56,11 @@ function Booking() {
       });
       const data = await response.json();
       console.log("success:", data);
-      alert("Booking Berhasil")
+      alert("Ticket booking successful")
     
     } catch (error) {
       console.error("error:",error);
-      alert("Booking gagal")
+      alert("There was an error ordering tickets, please try again")
     }
 
   })
