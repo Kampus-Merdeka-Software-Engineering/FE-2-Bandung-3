@@ -44,78 +44,138 @@
 
     <div class="container3">
         <div class="images"></div>
-        <form class="booking-form" id="booking-form">
+        <form class="booking-form" id="booking-form" method="post">
             <h2>Book Your Seat</h2>
             <h3>Book your seat now and secure your spot for an unforgettable journey.</h3>
             <div class="form-group">
-                <input type="text" id="name" class="form-input" placeholder="Name">
+                <input type="text" id="name" name="name" class="form-input" placeholder="Name">
             </div>
             <div class="form-group">
-                <input type="email" id="email" class="form-input" placeholder="Email" required>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input type="tel" id="phone" class="form-input" placeholder="Phone" required>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone" required>
             </div>
             <div class="form-group">
-                <input type="date" id="date" class="form-input">
+                <input type="date" id="date" name="date_destiation"class="form-input">
             </div>
 
             <div class="sec1">
-
-                <div class="wrapper">
-                    <div class="select-btn" id="select-btn-from">
-                        <span>From</span>
-                        <i class="uil uil-angle-down"></i>
-                    </div>
-                    <div class="content">
-                        <div class="search">
-                            <i class="uil uil-search"></i>
-                            <input spellcheck="false" type="text" placeholder="Search">
-                        </div>
-                        <ul class="options" id="optionsFrom"></ul>
-                    </div>
+                <div class="elem-group inlined">
+                    <select class="select" id="from" name="from" required>
+                        <option value="" disabled selected>From</option>
+                        <option value="Banda Aceh">Banda Aceh</option>
+                        <option value="Batam">Batam</option>
+                        <option value="Bengkulu">Bengkulu</option>
+                        <option value="Jambi">Jambi</option>
+                        <option value="Medan">Medan</option>
+                        <option value="Padang">Padang</option>
+                        <option value="Palembang">Palembang</option>
+                        <option value="Pangkal Pinang">Pangkal Pinang</option>
+                        <option value="Pekanbaru">Pekanbaru</option>
+                        <option value="Bandar Lampung">Bandar Lampung</option>
+                        <option value="Tanjung Pinang">Tanjung Pinang</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Bangka Belitung">Bangka Belitung</option>
+                        <option value="Malang">Malang</option>
+                        <option value="Semarang">Semarang</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                        <option value="Solo">Solo</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Denpasar">Denpasar</option>
+                        <option value="Lombok">Lombok</option>
+                        <option value="Labuan Bajo">Labuan Bajo</option>
+                        <option value="Kupang">Kupang</option>
+                        <option value="Pontianak">Pontianak</option>
+                        <option value="Banjarmasin">Banjarmasin</option>
+                        <option value="Balikpapan">Balikpapan</option>
+                        <option value="Ambon">Ambon</option>
+                        <option value="Mataram">Mataram</option>
+                        <option value="Kendari">Kendari</option>
+                        <option value="Gorontalo">Gorontalo</option>
+                        <option value="Makassar">Makassar</option>
+                        <option value="Manado">Manado</option>
+                        <option value="Palu">Palu</option>
+                        <option value="Ternate">Ternate</option>
+                        <option value="Samarinda">Samarinda</option>
+                        <option value="Biak">Biak</option>
+                        <option value="Jayapura">Jayapura</option>
+                        <option value="Marauke">Marauke</option>
+                        <option value="Timika">Timika</option>
+                        <option value="Sorong">Sorong</option>
+                    </select>
                 </div>
-                <div class="wrapper" id="wrapper">
-                    <div class="select-btn" id="select-btn-to">
-                        <span>To</span>
-                        <i class="uil uil-angle-down"></i>
-                    </div>
-                    <div class="content" id="content">
-                        <div class="search">
-                            <i class="uil uil-search"></i>
-                            <input class="input" spellcheck="false" type="text" placeholder="Search">
-                        </div>
-                        <ul class="options" id="options"></ul>
-                    </div>
+                <div class="elem-group inlined">
+                    <select class="select" id="to" name="to" required>
+                        <option value="" disabled selected>To</option>
+                        <option value="Banda Aceh">Banda Aceh</option>
+                        <option value="Batam">Batam</option>
+                        <option value="Bengkulu">Bengkulu</option>
+                        <option value="Jambi">Jambi</option>
+                        <option value="Medan">Medan</option>
+                        <option value="Padang">Padang</option>
+                        <option value="Palembang">Palembang</option>
+                        <option value="Pangkal Pinang">Pangkal Pinang</option>
+                        <option value="Pekanbaru">Pekanbaru</option>
+                        <option value="Bandar Lampung">Bandar Lampung</option>
+                        <option value="Tanjung Pinang">Tanjung Pinang</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Bangka Belitung">Bangka Belitung</option>
+                        <option value="Malang">Malang</option>
+                        <option value="Semarang">Semarang</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                        <option value="Solo">Solo</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Denpasar">Denpasar</option>
+                        <option value="Lombok">Lombok</option>
+                        <option value="Labuan Bajo">Labuan Bajo</option>
+                        <option value="Kupang">Kupang</option>
+                        <option value="Pontianak">Pontianak</option>
+                        <option value="Banjarmasin">Banjarmasin</option>
+                        <option value="Balikpapan">Balikpapan</option>
+                        <option value="Ambon">Ambon</option>
+                        <option value="Mataram">Mataram</option>
+                        <option value="Kendari">Kendari</option>
+                        <option value="Gorontalo">Gorontalo</option>
+                        <option value="Makassar">Makassar</option>
+                        <option value="Manado">Manado</option>
+                        <option value="Palu">Palu</option>
+                        <option value="Ternate">Ternate</option>
+                        <option value="Samarinda">Samarinda</option>
+                        <option value="Biak">Biak</option>
+                        <option value="Jayapura">Jayapura</option>
+                        <option value="Marauke">Marauke</option>
+                        <option value="Timika">Timika</option>
+                        <option value="Sorong">Sorong</option>
+                    </select>
                 </div>
 
                 <div class="elem-group inlined" id="adult">
                     <label for="adult">Adults</label>
-                    <input type="number" id="adult" name="total_adults" class="form-input" placeholder="0" min="1"
+                    <input type="number" id="adult" name="adult" class="form-input" placeholder="0" min="1"
                         required>
                 </div>
 
                 <div class="elem-group inlined">
                     <label for="child">Children</label>
-                    <input type="number" id="child" name="total_children" class="form-input" placeholder="0" min="0"
+                    <input type="number" id="child" name="children" class="form-input" placeholder="0" min="0"
                         required>
                 </div>
             </div>
 
             <div class="elem-group">
-                <select class="select" id="airlines-selection" name="airlines_preference" required>
+                <select class="select" id="airlines-selection" name="airline" required>
                     <option value="" disabled selected>Choose Airlines</option>
-                    <option value="connecting">Air Asia</option>
-                    <option value="adjoining">Batik Air</option>
-                    <option value="adjacent">Lion Air</option>
-                    <option value="adjacent">Garuda Indonesia</option>
-                    <option value="adjacent">Sriwijaya Air</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="Batik Air">Batik Air</option>
+                    <option value="Lion Air">Lion Air</option>
+                    <option value="Garuda Indonesia">Garuda Indonesia</option>
+                    <option value="Sriwijaya Air">Sriwijaya Air</option>
                 </select>
             </div>
-            <button type="submit" class="form-button">Book Now</button>
-            <div class="button-booking">
-                
 
+            <div class="button-booking">
+                <button type="submit" class="form-button">Book Now</button>
             </div>
         </form>
     </div>
@@ -140,7 +200,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                 <!-- diambil dari database melalui api -->
+                    <!-- diambil dari database melalui api -->
                 </tbody>
             </table>
         </div>
