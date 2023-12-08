@@ -1261,9 +1261,9 @@ div.elem-group {
 }
 
 div.elem-group.inlined {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 2% 0px 0px;
-    width: 47%;
+    margin: 0px 0px 0px 4%;
+    padding: 0px 0px 0px 0px;
+    width: 44%;
     display: inline-block;
     align-self: center;
 }
@@ -1765,16 +1765,6 @@ table .air-lines {
         top: 3px;
     }
 
-    div.sec1 {
-        padding-left: 4%;
-        display: inline-block;
-        width: 96%;
-    }
-
-    #wrapper {
-        padding-right: 0px;
-    }
-
     .form-input {
         padding: 12px 15px 12px 12px;
     }
@@ -1795,6 +1785,14 @@ table .air-lines {
     .booking-form {
         margin: 0px;
         padding: 10px 10px 20px;
+    }
+
+    div.elem-group.inlined {
+        margin: 0px 0px 0px 4.5%;
+        padding: 0px 0px 0px 0px;
+        width: 43.5%;
+        display: inline-block;
+        align-self: center;
     }
 }
 

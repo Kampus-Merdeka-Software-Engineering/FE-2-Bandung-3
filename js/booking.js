@@ -54,6 +54,15 @@ function Booking() {
         },
         body: JSON.stringify(formprops),
       });
+      const select1 = document.getElementById('from');
+      const select2 = document.getElementById('to');
+
+    if (select1.value === select2.value) {
+      alert('Select destination cannot be the same');
+      
+    } else {
+      console.log("sukses")
+    }
       const data = await response.json();
       console.log("success:", data);
       alert("Ticket booking successful")
@@ -66,3 +75,18 @@ function Booking() {
   })
 }
 Booking();
+
+function validateSelection() {
+  try {
+    var select1 = document.getElementById('select1');
+    var select2 = document.getElementById('select2');
+
+    if (select1.value === select2.value) {
+      throw new Error('Select values cannot be the same');
+    } else {
+      alert('Validation passed');
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+  }
