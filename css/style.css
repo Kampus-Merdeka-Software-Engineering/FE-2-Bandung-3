@@ -865,7 +865,7 @@ ul li button:hover {
 
 /*ajeng*/
 .card-img-ag.card8 {
-    background: url("");
+    background: url("../assets/members/ajeng.jpeg");
     background-size: cover;
 }
 
@@ -1754,9 +1754,9 @@ table .air-lines {
     }
 
     div.elem-group.inlined {
-        padding: 0px;
-        margin: 0;
-        width: 48%;
+        margin: 0px 0px 0px 3.5% !important;
+        padding: 0px 0px 0px 0px;
+        width: 44.5% !important;
         display: inline-block;
     }
 

@@ -1,3 +1,4 @@
+// method post
 function contact() {
   const form = document.getElementById("contact-us")
 
@@ -14,12 +15,17 @@ function contact() {
         },
         body: JSON.stringify(formprops),
       });
-      const data = await response.json();
-      console.log("success:", data);
-      alert("Saran anda telah kami terima. Terima Kasih.")
+      const data = await response.json()
+      
+      Swal.fire("Thank you for reaching out! Your message has been successfully sent. We'll get back to you shortly. Safe travels with Travlio!");
+      this.reset();
     } catch (error) {
-      console.error("error:",error);
-      alert("Gagal mengirim pesan")
+      
+      Swal.fire({
+        icon: "error",
+        text: "Oops! It seems there was an issue submitting your message. Please double-check your information and try again. If the problem persists, feel free to reach out to our support team.",
+        
+      });
     }
 
   })

@@ -5,11 +5,9 @@ let dataBooking = [];
 const loadData = async () => {
   try {
     const url = await fetch("https://be-2-bandung-3-production.up.railway.app/booking");
-    dataBooking = await url.json();
-    console.log(dataBooking);
+    dataBooking = await url.json(); 
     loadDataBooking(dataBooking);
   } catch (error) {
-    console.log(error)
   }
 }
 
@@ -31,7 +29,6 @@ const loadDataBooking = (data) => {
   }).join('')
   tbody.innerHTML = output;
 }
-
 loadData();
 
 // method post
@@ -39,54 +36,45 @@ const API_BASE_URL = 'https://be-2-bandung-3-production.up.railway.app';
 
 function Booking() {
   const form = document.getElementById("booking-form")
-  console.log(form, "ini form")
 
-  form.addEventListener("submit", async function (event){
+  form.addEventListener("submit", async function (event) {
     event.preventDefault();
     const formData = new FormData(form);
     const formprops = Object.fromEntries(formData);
-    console.log(formprops, "ini form props");
+    const select1 = document.getElementById('from');
+    const select2 = document.getElementById('to');
+
+    if (select1.value === select2.value) {
+      Swal.fire("Select destination cannot be the same!");
+      return;
+    }
     try {
-      const response = await fetch(`${API_BASE_URL}/booking`,{
+      const response = await fetch(`${API_BASE_URL}/booking`, {
         method: "POST",
-        headers:{
-          "Content-Type":"application/json",
+        headers: {
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formprops),
       });
-      const select1 = document.getElementById('from');
-      const select2 = document.getElementById('to');
-
-    if (select1.value === select2.value) {
-      alert('Select destination cannot be the same');
-      
-    } else {
-      console.log("sukses")
-    }
       const data = await response.json();
-      console.log("success:", data);
-      alert("Ticket booking successful")
-    
+
+      Swal.fire({
+        title: "Success",
+        text: "Ticket booking successful",
+        icon: "success"
+      });
+      loadData();
+      this.reset();
     } catch (error) {
-      console.error("error:",error);
-      alert("There was an error ordering tickets, please try again")
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There was an error ordering tickets, please try again!",
+        
+      });
     }
 
   })
 }
 Booking();
 
-function validateSelection() {
-  try {
-    var select1 = document.getElementById('select1');
-    var select2 = document.getElementById('select2');
-
-    if (select1.value === select2.value) {
-      throw new Error('Select values cannot be the same');
-    } else {
-      console.log('Validation passed');
-    }
-  } catch (error) {
-    alert(error.message);
-  }
-  }
