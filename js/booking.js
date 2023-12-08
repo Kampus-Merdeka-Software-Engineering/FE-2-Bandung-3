@@ -84,7 +84,7 @@ function validateSelection() {
     if (select1.value === select2.value) {
       throw new Error('Select values cannot be the same');
     } else {
-      alert('Validation passed');
+      console.log('Validation passed');
     }
   } catch (error) {
     alert(error.message);
